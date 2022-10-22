@@ -23,8 +23,8 @@ def autenticar():
     senha = request.form.get('senha')
     dados = {"usuário": usuario, "senha":senha}
     client = MongoClient("mongodb+srv://adminuser:adminuser@mygame.t19zp9a.mongodb.net/?retryWrites=true&w=majority")
-    db = client.get_database("clientslandpage")
-    dicionario = db.clients_landpage
+    colocardados = client.get_database("clientslandpage")
+    dicionario = colocardados.clients_landpage
     dicionario.insert_one(dados)
 
     return "Seu cadastro foi realizado com sucesso!"
