@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
     {% block conteudo %}
-    <h2>Hello {{nome}}</h2>
+    <h2>Hello Carinha</h2>
     <p>
-        Profissão: {{dados.profissao}}<br/>
-        Canal: {{dados.canal}}
+        <img class="imgquadrada" src="{{ url_for('static',filename = 'imagens/por-do-sol.jpg') }}"><br/>
     </p>
     {% endblock %}
